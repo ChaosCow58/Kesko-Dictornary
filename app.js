@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const sqlite3 = require('sqlite3').verbose();
-let table = 'CREATE TABLE WORDS (ID NUMBER)'
+let table = 'CREATE TABLE WORDS (ID number, Word text)'
 
 const app = express();
 
@@ -28,17 +28,9 @@ let db = new sqlite3.Database('public/words.db', (err) => {
     console.log('Contected to the SQlite database.')
 });
 
-// db.serialize(() => {
-//     db.each(`SELECT WordId as id, 
-//         Word as word
-//     FROM words`, (err, row) => {
-//         if (err) {
-//             console.error(err.message);
-//         }
+// db.run(table);
 
-//         console.log(row.id + "\t" + row.name);
-//     });
-// });
+db.run(`INSERT INTO`)
 
 db.close((err) => {
     if (err) {
