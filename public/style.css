@@ -1,15 +1,22 @@
 html, body {
-    width: 100%;
-    height: 160%;
     overflow-x: hidden;
-    background: #275ac9;
+    background: url(images/background.jpg) no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.rulesBox {
+      padding-left: 20px;
+      padding-bottom: 20px;
+      background-color: #41a8af;
+      width: 805px;
+      border: solid #1B0A66 medium;
+      margin: auto;
 }
 
 a {
     font-size: 18pt;
-    position: absolute;
-    padding-top: 15px;
-    color: #ddd8d8;
+    color: #6a519a;
     text-decoration: none;
 }
 

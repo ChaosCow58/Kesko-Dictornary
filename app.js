@@ -30,7 +30,7 @@ let db = new sqlite3.Database('public/words.db', (err) => {
 
 // db.run(table);
 
-db.run(`INSERT INTO`)
+// db.run(`INSERT INTO`)
 
 db.close((err) => {
     if (err) {
