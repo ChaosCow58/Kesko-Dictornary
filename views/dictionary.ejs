@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="dictionary.css" rel="stylesheet" type="text/css" />
+    <title>Dictionary</title>
+</head>
+<body>
+    <a href="/">Rules</a>
+    <table id="demo"></table>
+    <script>
+        function loadXMLDoc() {
+            const xhttp = new XMLHttpRequest();
+
+            xhttp.onreadystatechange = function() {
+               if (this.readyState == 4 && this.status == 200) {
+                    myFunction(this);
+               }
+            }
+            xhttp.open("GET", "dictionary.xml", true);
+            xhttp.send();
+        }
+
+        loadXMLDoc();
+
+        function myFunction(xml) {
+            let i;
+            let xmlDoc = xml.responseXML;
+            let table = "<tr><th>Word</th><th>Description</th></tr>";
+            let words = xmlDoc.getElementsByTagName("words");
+            console.log(words.length);
+            for (i = 0; i < words.length; i++) {
+                table += "<tr><td>" + words[i].getElementsByTagName("word")[0].childNodes[0].nodeValue + "</td><td>" + words[i].getElementsByTagName("description")[0].childNodes[0].nodeValue + "</td></tr>";
+                console.log(i);
+            }
+
+            document.getElementById("demo").innerHTML = table
+        }
+    </script>
+
+</body>
+</html>
