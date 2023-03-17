@@ -1,5 +1,8 @@
-<?xml version="1.0" encoding="UTF-8">
-    <words>
-        <word>kee</word>
-        <description>I</description>
-    </words>
+<?xml version="1.0" encoding="UTF-8"?>
+<words>
+    <word name="ke">kee</word>
+    <description>I</description>
+
+    <word name="stu">stu</word>
+    <description>You</description>
+</words>
