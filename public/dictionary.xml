@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <words>
-    <word name="ke">kee</word>
-    <description>I</description>
-
-    <word name="stu">stu</word>
-    <description>You</description>
+    <entry>
+        <word>kee</word>
+        <description>I</description>
+    </entry>
+    <entry>
+        <word>stu</word>
+        <description>You</description>
+    </entry>
+    <entry>
+        <word>sko</word>
+        <description>He</description>
+    </entry>
 </words>

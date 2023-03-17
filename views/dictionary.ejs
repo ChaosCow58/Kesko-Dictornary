@@ -26,13 +26,13 @@
         loadXMLDoc();
 
         function myFunction(xml) {
-            let i;
             let xmlDoc = xml.responseXML;
             let table = "<tr><th>Word</th><th>Description</th></tr>";
-            let words = xmlDoc.getElementsByTagName("words");
-            console.log(words.length);
-            for (i = 0; i < words.length; i++) {
-                table += "<tr><td>" + words[i].getElementsByTagName("word")[0].childNodes[0].nodeValue + "</td><td>" + words[i].getElementsByTagName("description")[0].childNodes[0].nodeValue + "</td></tr>";
+            let entries = xmlDoc.getElementsByTagName("entry");
+            for (let i = 0; i < entries.length; i++) {
+                let word = entries[i].getElementsByTagName("word")[0].childNodes[0].nodeValue;
+                let description = entries[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
+                table += "<tr><td>" + word + "</td><td>" + description + "</td></tr>";
                 console.log(i);
             }
 
