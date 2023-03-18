@@ -5,39 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="dictionary.css" rel="stylesheet" type="text/css" />
+    <link href="images/dictionaryIcon.png" rel="icon" type="image/x-icon" />
     <title>Dictionary</title>
 </head>
 <body>
     <a href="/">Rules</a>
     <table id="demo"></table>
     <script>
-        function loadXMLDoc() {
-            const xhttp = new XMLHttpRequest();
-
-            xhttp.onreadystatechange = function() {
-               if (this.readyState == 4 && this.status == 200) {
-                    myFunction(this);
-               }
-            }
-            xhttp.open("GET", "dictionary.xml", true);
-            xhttp.send();
-        }
-
-        loadXMLDoc();
-
         function myFunction(xml) {
-            let xmlDoc = xml.responseXML;
-            let table = "<tr><th>Word</th><th>Description</th></tr>";
-            let entries = xmlDoc.getElementsByTagName("entry");
+            const xmlDoc = xml.responseXML;
+            const entries = xmlDoc.getElementsByTagName("entry");
+            const tableHeader = "<tr><th scope='col'>Word</th><th scope='col'>Description</th></tr>";
+            let tableRows = "";
+    
             for (let i = 0; i < entries.length; i++) {
-                let word = entries[i].getElementsByTagName("word")[0].childNodes[0].nodeValue;
-                let description = entries[i].getElementsByTagName("description")[0].childNodes[0].nodeValue;
-                table += "<tr><td>" + word + "</td><td>" + description + "</td></tr>";
-                console.log(i);
+                const word = entries[i].getElementsByTagName("word")[0].textContent;
+                const description = entries[i].getElementsByTagName("description")[0].textContent;
+                tableRows += `<tr><th scope='row'>${word}</th><td>${description}</td></tr>`;
             }
-
-            document.getElementById("demo").innerHTML = table
+    
+            const demo = document.getElementById("demo");
+            demo.innerHTML = tableHeader + tableRows;
         }
+    
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "dictionary.xml", true);
+        xhttp.send();
     </script>
 
 </body>
