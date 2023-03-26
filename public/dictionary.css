@@ -18,12 +18,21 @@ h1 {
 .travelBar {
     /* border: solid #1B0A66 medium; */
     padding: 1em 0.5em 0.5em 1em;
+    text-align: center;
 }
 
 .travelBar a {
     font-size: 20pt;
     color: black;
     text-decoration: none;
+}
+
+.travelBar .letter {
+    letter-spacing: 20px;
+}
+
+.travelBar .rules {
+    padding-right: 17px;
 }
 
 .travelBar a:hover {

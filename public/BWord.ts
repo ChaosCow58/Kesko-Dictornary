@@ -10,7 +10,8 @@ function myFunction(xml) {
         const type = entries[i].getElementsByTagName("type")[0].textContent;
         const pronounce = entries[i].getElementsByTagName("pronounce")[0].textContent;
 
-        const definition = entries[i].getElementsByTagName("definition")[0].textContent;
+        const definition = entries[i].getElementsByTagName("definition")[0].innerHTML;
+        const definitionHTML = definition.replace(/(\r\n|\n|\r|&#13;)/gm, "<br>");
         divBody += `
         <div class='wordBox'>
             <h2>${word}</h2>
@@ -20,7 +21,7 @@ function myFunction(xml) {
 
             <div class='definition'>
                 <h3>Definition</h3>
-                <p>${definition}</p>
+                <p>${definitionHTML}</p>
             </div>
         </div>
         `;
@@ -36,5 +37,5 @@ xhttp.onreadystatechange = function() {
         myFunction(this);
     }
 };
-xhttp.open("GET", "dictionary.xml", true);
+xhttp.open("GET", "/databases/BWords.xml", true);
 xhttp.send();

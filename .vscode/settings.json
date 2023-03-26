@@ -1,0 +1,7 @@
+{
+    "files.exclude": {
+        "public/*.js": true,
+        "**/*.replit": true,
+        "**/*.nix": true
+    }
+}

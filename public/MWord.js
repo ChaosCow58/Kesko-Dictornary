@@ -20,5 +20,5 @@ xhttp.onreadystatechange = function () {
         myFunction(this);
     }
 };
-xhttp.open("GET", "/databases/words.xml", true);
+xhttp.open("GET", "/databases/MWords.xml", true);
 xhttp.send();
