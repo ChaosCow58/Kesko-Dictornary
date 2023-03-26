@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <words>
+<!-- newline character &#13; -->
     <entry>
         <word>kee</word>
         <headWord>???</headWord>
@@ -19,6 +20,6 @@
         <headWord>???</headWord>
         <type>Noun</type>
         <pronounce>sko</pronounce>
-        <definition>He</definition>
+        <definition>sko - he&#13;ska - she</definition>
     </entry>
 </words>
