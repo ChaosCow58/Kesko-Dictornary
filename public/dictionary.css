@@ -1,36 +1,82 @@
-td,
-th {
-    border: 1px solid rgb(190, 190, 190);
-    padding: 10px;
+html,
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
 }
 
-td {
+h1 {
+    font-size: 3em;
+    margin: 0;
+    padding: 0.5em;
+    background: #008080;
+    color: white;
     text-align: center;
+}
+
+.travelBar {
+    /* border: solid #1B0A66 medium; */
+    padding: 1em 0.5em 0.5em 1em;
+}
+
+.travelBar a {
+    font-size: 20pt;
+    color: black;
+    text-decoration: none;
+}
+
+.travelBar a:hover {
+    color: #aaa9a9;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    color: 008080;
+}
+
+.wordBox {
+    margin: 2em;
+    padding: 1em;
     background: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-tr:nth-child(even) {
-    background-color: #eee;
+.wordBox:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-th[scope='col'] {
-    background-color: #696969;
-    color: #fff;
+.headword {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #008080;
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 
-th[scope='row'] {
-    background-color: #d7d9f2;
+.speech {
+    font-weight: bold;
+    color: #008080;
 }
 
-caption {
-    padding: 10px;
-    caption-side: bottom;
+.pronunciation {
+    color: #808080;
 }
 
-table {
-    border-collapse: collapse;
-    border: 2px solid rgb(200, 200, 200);
-    letter-spacing: 1px;
-    font-family: sans-serif;
-    font-size: 0.8rem;
+.definition {
+    margin-top: 1em;
+    padding: 1em;
+    background: #f8f8f8;
+    border-radius: 5px;
+}
+
+.definition p:first-child {
+    margin-top: 0;
+}
+
+.definition p:last-child {
+    margin-bottom: 0;
 }

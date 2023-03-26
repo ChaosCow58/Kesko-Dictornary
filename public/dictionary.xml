@@ -2,14 +2,23 @@
 <words>
     <entry>
         <word>kee</word>
-        <description>I</description>
+        <headWord>???</headWord>
+        <type>Noun</type>
+        <pronounce>kee</pronounce>
+        <definition>I</definition>
     </entry>
     <entry>
         <word>stu</word>
-        <description>You</description>
+        <headWord>???</headWord>
+        <type>Noun</type>
+        <pronounce>stoo</pronounce>
+        <definition>You</definition>
     </entry>
     <entry>
-        <word>sko</word>
-        <description>He</description>
+        <word>sko (male), ska (female)</word>
+        <headWord>???</headWord>
+        <type>Noun</type>
+        <pronounce>sko</pronounce>
+        <definition>He</definition>
     </entry>
 </words>

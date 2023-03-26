@@ -9,34 +9,13 @@
     <title>Kesko Dictionary</title>
 </head>
 <body>
-    <a href="/">Rules</a>
-    <table id="demo"></table>
-    <script>
-        function myFunction(xml) {
-            const xmlDoc = xml.responseXML;
-            const entries = xmlDoc.getElementsByTagName("entry");
-            const tableHeader = "<tr><th scope='col'>Word</th><th scope='col'>Description</th></tr>";
-            let tableRows = "";
-    
-            for (let i = 0; i < entries.length; i++) {
-                const word = entries[i].getElementsByTagName("word")[0].textContent;
-                const description = entries[i].getElementsByTagName("description")[0].textContent;
-                tableRows += `<tr><th scope='row'>${word}</th><td>${description}</td></tr>`;
-            }
-    
-            const demo = document.getElementById("demo");
-            demo.innerHTML = tableHeader + tableRows;
-        }
-    
-        const xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                myFunction(this);
-            }
-        };
-        xhttp.open("GET", "dictionary.xml", true);
-        xhttp.send();
-    </script>
+    <div id="main">
+        <h1>Dictionary</h1>
+        <div class="travelBar">
+            <a href="/">Rules</a>
+        </div>
+    </div>
 
+    <script src="dictionary.js"></script>
 </body>
 </html>
