@@ -42,11 +42,25 @@
             <a href="/dictionary/verbs">Verbs</a>
         </div>
         <div id="data-output">
-
+            <% for (const word in words) { %>
+                <% if (${words[word]}.group === "A") { %>
+                    <div class='wordBox'>
+                        <h2><%= word.word %></h2>
+                        <p><span class='speech'>Headword:</span> <%= word.headWord %></p>
+                        <p><span class='speech'>Type:</span> <%= word.type %></p>
+                        <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= word.pronounce %>/</span></p>
+            
+                        <div class='definition'>
+                            <h3>Definition</h3>
+                            <p><%= word.definition %></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
         </div>
 
     </div>
 
-    <script src="/AWords.js"></script>
+    <!-- <script src="/AWords.js"></script> -->
 </body>
 </html>

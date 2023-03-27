@@ -1,5 +1,5 @@
-[
-    {
+{
+    "groupA": {
        "group": "A",
        "word": "kee",
        "headword": "???",
@@ -7,7 +7,7 @@
        "pronounce": "kee",
        "definition": "I"
     },
-    {
+    "groupB": {
         "group": "verb",
         "word": "stu",
         "headword": "???",
@@ -15,4 +15,4 @@
         "pronounce": "stoo",
         "definition": "You"
     }
-]
+}

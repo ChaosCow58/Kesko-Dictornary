@@ -1,32 +1,40 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const json = require('./public/databases/words.json');
+
+const words = JSON.parse(JSON.stringify(json));
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-app.get('/', (_req, res) => {
+app.get('/', (req, res) => {
     res.redirect('/rules');
 });
 
-app.get('/rules', (_req, res) => {
+app.get('/rules', (req, res) => {
     res.render('rules.ejs');
 });
 
-app.get('/dictionary', (_req, res) => {
+app.get('/dictionary', (req, res) => {
+    
     res.redirect('/dictionary/A');
 });
 
-app.get('/dictionary/A', (_req, res) => {
-    res.render('AWords.ejs', {root: __dirname});
+app.get('/dictionary/A', (req, res) => {
+    console.log(words);
+    res.render('AWords.ejs', {
+        words
+    });
 });
 
-app.get('/dictionary/B', (_req, res) => {
+app.get('/dictionary/B', (req, res) => {
     res.render('BWords.ejs', {root: __dirname});
 });
 
-app.get('/dictionary/C', (_req, res) => {
+app.get('/dictionary/C', (req, res) => {
     res.render('CWords.ejs', {root: __dirname});
 });
 
