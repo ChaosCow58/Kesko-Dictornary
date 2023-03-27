@@ -15,7 +15,6 @@
             <a class="rules" href="/">Rules</a>
             <a class="letter" href="/dictionary/A">A</a>
             <a class="letter" href="/dictionary/B">B</a>
-            <a class="letter" href="/dictionary/C">C</a>
             <a class="letter" href="/dictionary/D">D</a>
             <a class="letter" href="/dictionary/E">E</a>
             <a class="letter" href="/dictionary/F">F</a>
@@ -42,17 +41,19 @@
             <a href="/dictionary/verbs">Verbs</a>
         </div>
         <div id="data-output">
-            <% for (const word in words) { %>
-                <% if (${words[word]}.group === "A") { %>
+            <% let aWords = words.groupA.key; %>
+            <% for (int i = 0; i < aWords.length;i++) { %>
+                <% if (aword.group === "A") { %>
+                    <% for (words of word) %>
                     <div class='wordBox'>
-                        <h2><%= word.word %></h2>
-                        <p><span class='speech'>Headword:</span> <%= word.headWord %></p>
-                        <p><span class='speech'>Type:</span> <%= word.type %></p>
-                        <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= word.pronounce %>/</span></p>
+                        <h2><%= words[word].word %></h2>
+                        <p><span class='speech'>Headword:</span> <%= words[word].headword %></p>
+                        <p><span class='speech'>Type:</span> <%= words[word].type %></p>
+                        <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= words[word].pronounce %>/</span></p>
             
                         <div class='definition'>
                             <h3>Definition</h3>
-                            <p><%= word.definition %></p>
+                            <p><%= words[word].definition %></p>
                         </div>
                     </div>
                 <% } %>

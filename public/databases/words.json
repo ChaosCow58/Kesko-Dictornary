@@ -1,11 +1,22 @@
 {
     "groupA": {
-       "group": "A",
-       "word": "kee",
-       "headword": "???",
-       "type": "noun",
-       "pronounce": "kee",
-       "definition": "I"
+        "key":[
+            {
+                "group": "A",
+                "word": "kee",
+                "headword": "???",
+                "type": "noun",
+                "pronounce": "kee",
+                "definition": "I"
+            },
+            {
+                "group": "A",
+                "word": "stoo",
+                "headword": "???",
+                "type": "verb",
+                "pronounce": "stoo"
+            }
+        ]
     },
     "groupB": {
         "group": "verb",
