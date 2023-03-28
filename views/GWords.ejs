@@ -15,7 +15,6 @@
             <a class="rules" href="/">Rules</a>
             <a class="letter" href="/dictionary/A">A</a>
             <a class="letter" href="/dictionary/B">B</a>
-            <a class="letter" href="/dictionary/C">C</a>
             <a class="letter" href="/dictionary/D">D</a>
             <a class="letter" href="/dictionary/E">E</a>
             <a class="letter" href="/dictionary/F">F</a>
@@ -41,8 +40,21 @@
             <a class="letter" href="/dictionary/Z">Z</a>
             <a href="/dictionary/verbs">Verbs</a>
         </div>
-    </div>
-
-    <script src="/GWord.js"></script>
+        <div id="data-output">
+            <% let groupG = words.groupG.key; %>
+            <% for (const word of groupG) { %>
+                <div class='wordBox'>
+                    <h2><%= word.word %></h2>
+                    <p><span class='speech'>Headword:</span> <%= word.headword %></p>
+                    <p><span class='speech'>Type:</span> <%= word.type %></p>
+                    <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= word.pronounce %>/</span></p>
+                    
+                    <div class='definition'>
+                        <h3>Definition</h3>
+                        <p><%= word.definition %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
 </body>
 </html>

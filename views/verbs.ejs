@@ -14,35 +14,47 @@
         <div class="travelBar">
             <a class="rules" href="/">Rules</a>
             <a class="letter" href="/dictionary/A">A</a>
-            <a class="letter" href="#">B</a>
-            <a class="letter" href="#">C</a>
-            <a class="letter" href="#">D</a>
-            <a class="letter" href="#">E</a>
-            <a class="letter" href="#">F</a>
-            <a class="letter" href="#">G</a>
-            <a class="letter" href="#">H</a>
-            <a class="letter" href="#">I</a>
-            <a class="letter" href="#">J</a>
-            <a class="letter" href="#">K</a>
-            <a class="letter" href="#">L</a>
-            <a class="letter" href="#">M</a>
-            <a class="letter" href="#">N</a>
-            <a class="letter" href="#">O</a>
-            <a class="letter" href="#">P</a>
-            <a class="letter" href="#">Q</a>
-            <a class="letter" href="#">R</a>
-            <a class="letter" href="#">S</a>
-            <a class="letter" href="#">T</a>
-            <a class="letter" href="#">U</a>
-            <a class="letter" href="#">V</a>
-            <a class="letter" href="#">W</a>
-            <a class="letter" href="#">X</a>
-            <a class="letter" href="#">Y</a>
-            <a class="letter" href="#">Z</a>
+            <a class="letter" href="/dictionary/B">B</a>
+            <a class="letter" href="/dictionary/D">D</a>
+            <a class="letter" href="/dictionary/E">E</a>
+            <a class="letter" href="/dictionary/F">F</a>
+            <a class="letter" href="/dictionary/G">G</a>
+            <a class="letter" href="/dictionary/H">H</a>
+            <a class="letter" href="/dictionary/I">I</a>
+            <a class="letter" href="/dictionary/J">J</a>
+            <a class="letter" href="/dictionary/K">K</a>
+            <a class="letter" href="/dictionary/L">L</a>
+            <a class="letter" href="/dictionary/M">M</a>
+            <a class="letter" href="/dictionary/N">N</a>
+            <a class="letter" href="/dictionary/O">O</a>
+            <a class="letter" href="/dictionary/P">P</a>
+            <a class="letter" href="/dictionary/Q">Q</a>
+            <a class="letter" href="/dictionary/R">R</a>
+            <a class="letter" href="/dictionary/S">S</a>
+            <a class="letter" href="/dictionary/T">T</a>
+            <a class="letter" href="/dictionary/U">U</a>
+            <a class="letter" href="/dictionary/V">V</a>
+            <a class="letter" href="/dictionary/W">W</a>
+            <a class="letter" href="/dictionary/X">X</a>
+            <a class="letter" href="/dictionary/Y">Y</a>
+            <a class="letter" href="/dictionary/Z">Z</a>
             <a href="/dictionary/verbs">Verbs</a>
         </div>
-    </div>
-
-    <script src="/verbs.js"></script>
+        <div id="data-output">
+            <% let verbs1 = verbs.groupVerbs.key; %>
+            <% for (const verb of verbs1) { %>
+                <div class='wordBox'>
+                    <h2><%= verb.verb %></h2>
+                    <p><span class='speech'>Headword:</span> <%= verb.headword %></p>
+                    <p><span class='speech'>Type:</span> Verb</p>
+                    <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= verb.pronounce %>/</span></p>
+                    
+                    <div class='definition'>
+                        <h3>Definition</h3>
+                        <p><%= verb.definition %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
 </body>
 </html>

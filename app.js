@@ -1,130 +1,186 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
+const wordJSON = require('./public/databases/words.json');
+const verbJSON = require('./public/databases/verbs.json');
+
+const words = JSON.parse(JSON.stringify(wordJSON));
+const verbs = JSON.parse(JSON.stringify(verbJSON));
 
 const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
-app.get('/', (_req, res) => {
+app.get('/', (req, res) => {
     res.redirect('/rules');
 });
 
-app.get('/rules', (_req, res) => {
+app.get('/rules', (req, res) => {
     res.render('rules.ejs');
 });
 
-app.get('/dictionary', (_req, res) => {
+app.get('/dictionary', (req, res) => {
+    
     res.redirect('/dictionary/A');
 });
 
-app.get('/dictionary/A', (_req, res) => {
-    res.render('AWords.ejs', {root: __dirname});
+app.get('/dictionary/A', (req, res) => {
+    console.log(words);
+    res.render('AWords.ejs', {
+        words
+    });
 });
 
-app.get('/dictionary/B', (_req, res) => {
-    res.render('BWords.ejs', {root: __dirname});
-});
-
-app.get('/dictionary/C', (_req, res) => {
-    res.render('CWords.ejs', {root: __dirname});
+app.get('/dictionary/B', (req, res) => {
+    res.render('BWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/D', (_req, res) => {
-    res.render('DWords.ejs', {root: __dirname});
+    res.render('DWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/E', (_req, res) => {
-    res.render('EWords.ejs', {root: __dirname});
+    res.render('EWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/F', (_req, res) => {
-    res.render('FWords.ejs', {root: __dirname});
+    res.render('FWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/G', (_req, res) => {
-    res.render('GWords.ejs', {root: __dirname});
+    res.render('GWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/H', (_req, res) => {
-    res.render('HWords.ejs', {root: __dirname});
+    res.render('HWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/I', (_req, res) => {
-    res.render('IWords.ejs', {root: __dirname});
+    res.render('IWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/J', (_req, res) => {
-    res.render('JWords.ejs', {root: __dirname});
+    res.render('JWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/K', (_req, res) => {
-    res.render('KWords.ejs', {root: __dirname});
+    res.render('KWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/L', (_req, res) => {
-    res.render('LWords.ejs', {root: __dirname});
+    res.render('LWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/M', (_req, res) => {
-    res.render('MWords.ejs', {root: __dirname});
+    res.render('MWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/N', (_req, res) => {
-    res.render('NWords.ejs', {root: __dirname});
+    res.render('NWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/O', (_req, res) => {
-    res.render('OWords.ejs', {root: __dirname});
+    res.render('OWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/P', (_req, res) => {
-    res.render('PWords.ejs', {root: __dirname});
+    res.render('PWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/Q', (_req, res) => {
-    res.render('QWords.ejs', {root: __dirname});
+    res.render('QWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/R', (_req, res) => {
-    res.render('RWords.ejs', {root: __dirname});
+    res.render('RWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/S', (_req, res) => {
-    res.render('SWords.ejs', {root: __dirname});
+    res.render('SWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/T', (_req, res) => {
-    res.render('TWords.ejs', {root: __dirname});
+    res.render('TWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/U', (_req, res) => {
-    res.render('UWords.ejs', {root: __dirname});
+    res.render('UWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/V', (_req, res) => {
-    res.render('VWords.ejs', {root: __dirname});
+    res.render('VWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/W', (_req, res) => {
-    res.render('WWords.ejs', {root: __dirname});
+    res.render('WWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/X', (_req, res) => {
-    res.render('XWords.ejs', {root: __dirname});
+    res.render('XWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/Y', (_req, res) => {
-    res.render('ZWords.ejs', {root: __dirname});
+    res.render('ZWords.ejs', {
+        words
+    });
 });
 
 app.get('/dictionary/Z', (_req, res) => {
-    res.render('ZWords.ejs', {root: __dirname});
+    res.render('ZWords.ejs', {
+        words
+    });
 });
 
 
 app.get('/dictionary/verbs', (_req, res) => {
-    res.render('verbs.ejs', {root: __dirname});
+    res.render('verbs.ejs', {
+        verbs
+    });
 });
 
 app.listen(5000, () => {
