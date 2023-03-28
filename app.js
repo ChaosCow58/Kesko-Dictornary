@@ -28,7 +28,7 @@ app.get('/create', (req, res) => {
     res.render('createWord.ejs');
 });
 
-app.get('/add', (req, res) => {
+app.post('/add', (req, res) => {
     fs.writeFile('./public/databases/words.json', 'utf8', (err, data) => {
         if (err) throw err;
         
