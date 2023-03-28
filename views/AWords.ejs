@@ -41,27 +41,20 @@
             <a href="/dictionary/verbs">Verbs</a>
         </div>
         <div id="data-output">
-            <% let aWords = words.groupA.key; %>
-            <% for (int i = 0; i < aWords.length;i++) { %>
-                <% if (aword.group === "A") { %>
-                    <% for (words of word) %>
-                    <div class='wordBox'>
-                        <h2><%= words[word].word %></h2>
-                        <p><span class='speech'>Headword:</span> <%= words[word].headword %></p>
-                        <p><span class='speech'>Type:</span> <%= words[word].type %></p>
-                        <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= words[word].pronounce %>/</span></p>
-            
-                        <div class='definition'>
-                            <h3>Definition</h3>
-                            <p><%= words[word].definition %></p>
-                        </div>
+            <% let groupA = words.groupA.key; %>
+            <% for (const word of groupA) { %>
+                <div class='wordBox'>
+                    <h2><%= word.word %></h2>
+                    <p><span class='speech'>Headword:</span> <%= word.headword %></p>
+                    <p><span class='speech'>Type:</span> <%= word.type %></p>
+                    <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= word.pronounce %>/</span></p>
+                    
+                    <div class='definition'>
+                        <h3>Definition</h3>
+                        <p><%= word.definition %></p>
                     </div>
-                <% } %>
+                </div>
             <% } %>
         </div>
-
-    </div>
-
-    <!-- <script src="/AWords.js"></script> -->
 </body>
 </html>

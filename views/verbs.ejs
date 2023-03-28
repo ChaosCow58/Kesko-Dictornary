@@ -15,7 +15,6 @@
             <a class="rules" href="/">Rules</a>
             <a class="letter" href="/dictionary/A">A</a>
             <a class="letter" href="/dictionary/B">B</a>
-            <a class="letter" href="/dictionary/C">C</a>
             <a class="letter" href="/dictionary/D">D</a>
             <a class="letter" href="/dictionary/E">E</a>
             <a class="letter" href="/dictionary/F">F</a>
@@ -41,23 +40,21 @@
             <a class="letter" href="/dictionary/Z">Z</a>
             <a href="/dictionary/verbs">Verbs</a>
         </div>
-
-        <table>
-            <thead>
-                <tr>
-                    <th>Word</th>
-                    <th>HeadWord</th>
-                    <th>Type</th>
-                    <th>Pronunciation</th>
-                    <th>Defintion</th>
-                </tr>
-            </thead>
-            <tbody id="data-output">
-
-            </tbody>
-        </table>
-    </div>
-
-    <script src="/AWords.js"></script>
+        <div id="data-output">
+            <% let verbs1 = verbs.groupVerbs.key; %>
+            <% for (const verb of verbs1) { %>
+                <div class='wordBox'>
+                    <h2><%= verb.verb %></h2>
+                    <p><span class='speech'>Headword:</span> <%= verb.headword %></p>
+                    <p><span class='speech'>Type:</span> Verb</p>
+                    <p><span class='speech'>Pronunciation:</span> <span class='pronunciation'>/<%= verb.pronounce %>/</span></p>
+                    
+                    <div class='definition'>
+                        <h3>Definition</h3>
+                        <p><%= verb.definition %></p>
+                    </div>
+                </div>
+            <% } %>
+        </div>
 </body>
 </html>
