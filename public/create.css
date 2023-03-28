@@ -1,8 +1,11 @@
 .create {
-    border: solid 3px;
     margin: auto;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#sumbit {
+    margin-right: 100px;
 }

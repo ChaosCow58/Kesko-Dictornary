@@ -28,6 +28,18 @@ app.get('/create', (req, res) => {
     res.render('createWord.ejs');
 });
 
+app.get('/add', (req, res) => {
+    fs.writeFile('./public/databases/words.json', 'utf8', (err, data) => {
+        if (err) throw err;
+        
+        data = `
+        
+        
+        `;
+    });
+    res.redirect('/create')
+});
+
 app.get('/dictionary/A', (req, res) => {
     console.log(words);
     res.render('AWords.ejs', {
