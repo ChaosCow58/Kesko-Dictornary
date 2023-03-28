@@ -21,8 +21,11 @@ app.get('/rules', (req, res) => {
 });
 
 app.get('/dictionary', (req, res) => {
-    
     res.redirect('/dictionary/A');
+});
+
+app.get('/create', (req, res) => {
+    res.render('createWord.ejs');
 });
 
 app.get('/dictionary/A', (req, res) => {
