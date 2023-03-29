@@ -2,17 +2,17 @@
     "groupA": {
         "key": [
             {
-                "word": "kee",
-                "headword": "???",
-                "type": "noun",
-                "pronounce": "kee",
+                "word": "u",
+                "headword": "u",
+                "type": "verb",
+                "pronounce": "u",
                 "definition": "I"
             },
             {
-                "word": "stoo",
-                "headword": "???",
-                "type": "verb",
-                "pronounce": "stoo"
+                "word": "For",
+                "headword": "You",
+                "type": "adverb",
+                "pronounce": "h"
             }
         ]
     },

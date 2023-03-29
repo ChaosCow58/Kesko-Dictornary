@@ -5,10 +5,11 @@ const bodyparser = require('body-parser');
 
 const wordJSON = require('./public/databases/words.json');
 const verbJSON = require('./public/databases/verbs.json');
-const { name } = require('ejs');
+const backupJSON = require('./public/databases/backup.json');
 
 const words = JSON.parse(JSON.stringify(wordJSON));
 const verbs = JSON.parse(JSON.stringify(verbJSON));
+const backup = JSON.parse(JSON.stringify(backupJSON));
 
 const app = express();
 
@@ -36,21 +37,27 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    // data = req.body;
-    // console.log(data);
-    for (const word in words) {
-        if (words[name] === "group" + req.body.group) {
-            console.log("Yes");
-        }
-        console.log(words);
+    for (const word in backup) {
+        if (word === "group" + req.body.group) {
+            let key1 = backup[word].key;
+            for (const wordKey of key1) {
+                wordKey.word = req.body.word;
+                wordKey.headword = req.body.headword;
+                wordKey.type = req.body.type;
+                wordKey.pronounce = req.body.pronounce;
+                wordKey.defintion = req.body.defintion;
+            }
+        } 
     }
-    // fs.writeFile('./public/databases/words.json', 'words', (err, data) => {
-    //     if (err) throw err;
-      
-        
     
-    // });
-    res.redirect('/create')
+    fs.writeFile('./public/databases/backup.json', JSON.stringify(backup), (err) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        console.log("File has been written successfully.");
+        res.redirect('/create');
+    });
 });
 
 app.get('/dictionary/A', (req, res) => {
