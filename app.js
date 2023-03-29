@@ -1,15 +1,22 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const bodyparser = require('body-parser');
+
 const wordJSON = require('./public/databases/words.json');
 const verbJSON = require('./public/databases/verbs.json');
+const { name } = require('ejs');
 
 const words = JSON.parse(JSON.stringify(wordJSON));
 const verbs = JSON.parse(JSON.stringify(verbJSON));
 
 const app = express();
 
+app.use(bodyparser.json());
+app.use(bodyparser.urlencoded({extended: true}));
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
@@ -29,14 +36,20 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    fs.writeFile('./public/databases/words.json', 'utf8', (err, data) => {
-        if (err) throw err;
+    // data = req.body;
+    // console.log(data);
+    for (const word in words) {
+        if (words[name] === "group" + req.body.group) {
+            console.log("Yes");
+        }
+        console.log(words);
+    }
+    // fs.writeFile('./public/databases/words.json', 'words', (err, data) => {
+    //     if (err) throw err;
+      
         
-        data = `
-        
-        
-        `;
-    });
+    
+    // });
     res.redirect('/create')
 });
 
