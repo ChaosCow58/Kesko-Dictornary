@@ -5,11 +5,12 @@ const bodyparser = require('body-parser');
 
 const wordJSON = require('./public/databases/words.json');
 const verbJSON = require('./public/databases/verbs.json');
-const backupJSON = require('./public/databases/backup.json');
 
 const words = JSON.parse(JSON.stringify(wordJSON));
 const verbs = JSON.parse(JSON.stringify(verbJSON));
-const backup = JSON.parse(JSON.stringify(backupJSON));
+
+let isWord = false;
+let isVerb = false;
 
 const app = express();
 
@@ -37,27 +38,53 @@ app.get('/create', (req, res) => {
 });
 
 app.post('/add', (req, res) => {
-    for (const word in backup) {
-        if (word === "group" + req.body.group) {
-            let key1 = backup[word].key;
-            for (const wordKey of key1) {
-                wordKey.word = req.body.word;
-                wordKey.headword = req.body.headword;
-                wordKey.type = req.body.type;
-                wordKey.pronounce = req.body.pronounce;
-                wordKey.defintion = req.body.defintion;
-            }
+    for (const word in words) {
+        if (word === "group" + req.body.group && req.body.group !== "Verb" && req.body.type !== "Verb") {
+            isWord = true;
+            let newKey = {
+                word: req.body.word,
+                headword: req.body.headword,
+                type: req.body.type,
+                pronounce: req.body.pronounce,
+                defintion: req.body.defintion
+            };
+            words[word].key.push(newKey);
         } 
     }
-    
-    fs.writeFile('./public/databases/backup.json', JSON.stringify(backup), (err) => {
-        if (err) {
-            console.log(err);
-            return;
+    for (const verb in verbs) {
+        if ("group" + req.body.group === "groupVerb" && req.body.type === "Verb") {
+            let newVerb = {
+                verb: req.body.word,
+                headword: req.body.headword,
+                pronounce: req.body.pronounce,
+                defintion: req.body.defintion
+            };
+            verbs[verb].key.push(newVerb);
         }
-        console.log("File has been written successfully.");
-        res.redirect('/create');
-    });
+    }
+    
+    if (isWord) {
+        fs.writeFile('./public/databases/words.json', JSON.stringify(words), (err) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log("File has been written successfully.");
+            res.redirect('/create');
+            isWord = false;
+        });
+    } else if (isVerb) {
+        fs.writeFile('./public/databases/verbs.json', JSON.stringify(verbs), (err) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            console.log("File has been written successfully.");
+            res.redirect('/create');
+            isVerb = false;
+        });
+    }
+   
 });
 
 app.get('/dictionary/A', (req, res) => {
