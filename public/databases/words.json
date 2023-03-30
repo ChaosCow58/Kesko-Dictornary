@@ -1,1 +1,74 @@
-{"groupA":{"key":[{"word":"kee","headword":"???","type":"noun","pronounce":"kee","definition":"I"},{"word":"stoo","headword":"???","type":"verb","pronounce":"stoo"},{"word":"Word A","headword":"???","type":"noun","pronounce":"ddd"},{"word":"A","headword":"A","type":"noun","pronounce":"A"}]},"groupB":{"key":[{"word":"Word B","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupD":{"key":[{"word":"Word D","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupE":{"key":[{"word":"Word E","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupF":{"key":[{"word":"Word F","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupG":{"key":[{"word":"Word G","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupH":{"key":[{"word":"Word H","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupI":{"key":[{"word":"Word I","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupJ":{"key":[{"word":"Word J","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupK":{"key":[{"word":"Word K","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupL":{"key":[{"word":"Word L","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupM":{"key":[{"word":"Word M","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupN":{"key":[{"word":"Word N","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupO":{"key":[{"word":"Word O","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupP":{"key":[{"word":"Word P","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupR":{"key":[{"word":"Word R","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupS":{"key":[{"word":"Word S","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupT":{"key":[{"word":"Word T","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupU":{"key":[{"word":"Word U","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupV":{"key":[{"word":"Word V","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupW":{"key":[{"word":"Word W","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupX":{"key":[{"word":"Word X","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupY":{"key":[{"word":"Word Y","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]},"groupZ":{"key":[{"word":"Word Z","headword":"???","type":"Noun","pronounce":"???","definition":"???"}]}}
+{
+    "groupA": {
+        "key": []
+    },
+    "groupB": {
+        "key": []
+    },
+    "groupD": {
+        "key": []
+    },
+    "groupE": {
+        "key": []
+    },
+    "groupF": {
+        "key": []
+    },
+    "groupG": {
+        "key": []
+    },
+    "groupH": {
+        "key": []
+    },
+    "groupI": {
+        "key": []
+    },
+    "groupJ": {
+        "key": []
+    },
+    "groupK": {
+        "key": []
+    },
+    "groupL": {
+        "key": []
+    },
+    "groupM": {
+        "key": []
+    },
+    "groupN": {
+        "key": []
+    },
+    "groupO": {
+        "key": []
+    },
+    "groupP": {
+        "key": []
+    },
+    "groupR": {
+        "key": []
+    },
+    "groupS": {
+        "key": []
+    },
+    "groupT": {
+        "key": []
+    },
+    "groupU": {
+        "key": []
+    },
+    "groupV": {
+        "key": []
+    },
+    "groupW": {
+        "key": []
+    },
+    "groupX": {
+        "key": []
+    },
+    "groupY": {
+        "key": []
+    },
+    "groupZ": {
+        "key": []
+    }
+}

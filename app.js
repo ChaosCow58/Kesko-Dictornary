@@ -40,26 +40,27 @@ app.get('/create', (req, res) => {
 app.post('/add', (req, res) => {
     for (const word in words) {
         if (word === "group" + req.body.group && req.body.group !== "Verb" && req.body.type !== "Verb") {
-            isWord = true;
             let newKey = {
                 word: req.body.word,
                 headword: req.body.headword,
                 type: req.body.type,
                 pronounce: req.body.pronounce,
-                defintion: req.body.defintion
+                definition: req.body.definition
             };
             words[word].key.push(newKey);
-        } 
+            isWord = true;
+        }
     }
     for (const verb in verbs) {
-        if ("group" + req.body.group === "groupVerb" && req.body.type === "Verb") {
+        if ("group" + req.body.group === "groupVerb") {
             let newVerb = {
                 verb: req.body.word,
                 headword: req.body.headword,
                 pronounce: req.body.pronounce,
-                defintion: req.body.defintion
+                definition: req.body.definition
             };
             verbs[verb].key.push(newVerb);
+            isVerb = true;
         }
     }
     
@@ -88,7 +89,6 @@ app.post('/add', (req, res) => {
 });
 
 app.get('/dictionary/A', (req, res) => {
-    console.log(words);
     res.render('AWords.ejs', {
         words
     });
