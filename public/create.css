@@ -1,31 +1,65 @@
-.create {
-    margin: auto;
-    height: 100vh;
+/* Add some basic styling to the body */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the container div */
+  .create {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+  }
+  
+  /* Style the form */
+  .add {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.add {
-    width: 500px;
-    max-width: 500px;
-    height: 665px;
-    max-height: 665px;
-    margin: 1rem;
-    padding: 1.5rem;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0, 0.2);
-    border-radius: 100px;
-    background: #3065cf;
-    text-align: center;
-}
-
-h1 {
-    text-align: center;
-    padding: 15px 3px 1px 3px;
-    font-size: 41px;
-}
-
-#sumbit {
-    font-size: 15px;
-    padding: 5px 105px;
-}
+    flex-direction: column;
+  }
+  
+  /* Style the form elements */
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  span {
+    margin-top: 10px;
+  }
+  
+  select,
+  input[type="text"],
+  textarea {
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  a {
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #333;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
