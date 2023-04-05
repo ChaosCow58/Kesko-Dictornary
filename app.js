@@ -42,7 +42,6 @@ app.post('/add', (req, res) => {
         if (word === "group" + req.body.group && req.body.group !== "Verb" && req.body.type !== "Verb") {
             let newKey = {
                 word: req.body.word,
-                headword: req.body.headword,
                 type: req.body.type,
                 pronounce: req.body.pronounce,
                 definition: req.body.definition
@@ -55,15 +54,13 @@ app.post('/add', (req, res) => {
         if ("group" + req.body.group === "groupVerb") {
             let newVerb = {
                 verb: req.body.word,
-                headword: req.body.headword,
                 pronounce: req.body.pronounce,
                 definition: req.body.definition
             };
             verbs[verb].key.push(newVerb);
             isVerb = true;
         }
-    }
-    
+    }   
     if (isWord) {
         fs.writeFile('./public/databases/words.json', JSON.stringify(words), (err) => {
             if (err) {
