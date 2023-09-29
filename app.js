@@ -86,159 +86,185 @@ app.post('/add', (req, res) => {
 });
 
 app.get('/dictionary/A', (req, res) => {
-    res.render('AWords.ejs', {
-        words
+    let group = words.groupA.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/B', (req, res) => {
-    res.render('BWords.ejs', {
-        words
+    let group = words.groupB.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/D', (_req, res) => {
-    res.render('DWords.ejs', {
-        words
+    let group = words.groupD.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/E', (_req, res) => {
-    res.render('EWords.ejs', {
-        words
+    let group = words.groupE.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/F', (_req, res) => {
-    res.render('FWords.ejs', {
-        words
+    let group = words.groupF.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/G', (_req, res) => {
-    res.render('GWords.ejs', {
-        words
+    let group = words.groupG.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/H', (_req, res) => {
-    res.render('HWords.ejs', {
-        words
+    let group = words.groupH.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/I', (_req, res) => {
-    res.render('IWords.ejs', {
-        words
+    let group = words.groupI.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/J', (_req, res) => {
-    res.render('JWords.ejs', {
-        words
+    let group = words.groupJ.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/K', (_req, res) => {
-    res.render('KWords.ejs', {
-        words
+    let group = words.groupK.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/L', (_req, res) => {
-    res.render('LWords.ejs', {
-        words
+    let group = words.groupL.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/M', (_req, res) => {
-    res.render('MWords.ejs', {
-        words
+    let group = words.groupM.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/N', (_req, res) => {
-    res.render('NWords.ejs', {
-        words
+    let group = words.groupN.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/O', (_req, res) => {
-    res.render('OWords.ejs', {
-        words
+    let group = words.groupO.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/P', (_req, res) => {
-    res.render('PWords.ejs', {
-        words
+    let group = words.groupP.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/Q', (_req, res) => {
-    res.render('QWords.ejs', {
-        words
+    let group = words.groupQ.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/R', (_req, res) => {
-    res.render('RWords.ejs', {
-        words
+    let group = words.groupR.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/S', (_req, res) => {
-    res.render('SWords.ejs', {
-        words
+    let group = words.groupS.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/T', (_req, res) => {
-    res.render('TWords.ejs', {
-        words
+    let group = words.groupT.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/U', (_req, res) => {
-    res.render('UWords.ejs', {
-        words
+    let group = words.groupU.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/V', (_req, res) => {
-    res.render('VWords.ejs', {
-        words
+    let group = words.groupV.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/W', (_req, res) => {
-    res.render('WWords.ejs', {
-        words
+    let group = words.groupW.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/X', (_req, res) => {
-    res.render('XWords.ejs', {
-        words
+    let group = words.groupX.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/Y', (_req, res) => {
-    res.render('ZWords.ejs', {
-        words
+    let group = words.groupY.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 app.get('/dictionary/Z', (_req, res) => {
-    res.render('ZWords.ejs', {
-        words
+    let group = words.groupZ.key;
+    res.render('words.ejs', {
+        group
     });
 });
 
 
 app.get('/dictionary/verbs', (_req, res) => {
-    res.render('verbs.ejs', {
-        verbs
+    let group = verbs.groupVerbs.key
+    res.render('words.ejs', {
+        group
     });
 });
 
