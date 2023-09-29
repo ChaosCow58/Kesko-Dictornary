@@ -268,6 +268,10 @@ app.get('/dictionary/verbs', (_req, res) => {
     });
 });
 
+app.all('*', (_req, res) => {
+    res.status(404).send('<h1>404! Page not found</h1>');
+});
+
 app.listen(5000, () => {
     console.log('Server started!');
 });
